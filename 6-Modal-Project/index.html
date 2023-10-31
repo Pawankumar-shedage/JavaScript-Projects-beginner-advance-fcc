@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Project</title>
+
+    <!-- style sheets -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Body</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta fuga distinctio id maiores nihil, tempore impedit laborum officiis omnis officia, veniam rem. Culpa fugiat asperiores amet laborum ullam. Culpa nisi libero earum magni consectetur. Aut blanditiis nulla nemo consequuntur dolores ipsum quasi officiis pariatur aliquid eum doloremque quas illum ducimus dolore quidem mollitia praesentium, non iure in architecto accusamus tempore deserunt voluptatum. Molestias dolorem, officia dolores nemo rem quis laboriosam consectetur corporis ad, incidunt qui culpa illo nam, suscipit delectus adipisci natus labore! Animi, modi autem sint exercitationem voluptate, provident veritatis deleniti aspernatur est dolores veniam in harum omnis. Rerum, fugiat excepturi minus iure vitae delectus itaque aspernatur ex voluptatem eaque omnis nemo expedita odio voluptas maiores debitis. Eveniet, eligendi? Nihil nisi pariatur, magni quae repellat possimus mollitia laudantium maxime et natus at est laboriosam ut labore voluptas esse nulla excepturi debitis ullam. Assumenda non sapiente enim aut beatae officiis! Explicabo vel debitis, pariatur quasi eius optio suscipit commodi voluptate quia modi delectus eveniet eos exercitationem quis corporis illum molestiae dicta necessitatibus autem? A aspernatur, numquam laborum dolor illo perspiciatis optio quae dolorem, eius sit veritatis tenetur omnis. Obcaecati velit ut corrupti ullam enim sint nihil accusantium dignissimos incidunt quod ad est consequuntur hic porro nulla expedita possimus adipisci suscipit accusamus ab, non mollitia doloremque! Commodi quaerat deserunt eligendi odit ad labore obcaecati nemo est in veniam at officiis sequi recusandae quia molestias reiciendis fugiat, tempora sunt, minima odio soluta quae? Consectetur, tempore consequatur recusandae numquam sint minima sapiente eveniet fuga itaque quae cum ipsa dolorem mollitia facilis velit? In nihil error hic molestias quas est iure dolores eos dolorum fugit eligendi exercitationem rem ipsa esse, ratione distinctio magni, quos nesciunt nisi? Laborum unde id asperiores dolore nam deleniti similique, pariatur a veritatis soluta aliquid, molestias voluptatibus mollitia quidem voluptate omnis nulla modi accusantium assumenda, quam tenetur molestiae architecto! Ad perferendis quas laboriosam, pariatur facilis neque omnis, ipsum, distinctio molestias itaque aut quod velit tempora modi voluptas voluptatum provident quam hic. Neque repellat rerum consequatur odio architecto labore ullam, itaque veritatis. Porro blanditiis omnis magnam natus necessitatibus amet, ullam expedita, voluptate recusandae voluptatem obcaecati adipisci quod velit repellendus facere sed maxime itaque sequi minima quos? Ullam repudiandae nihil eius molestiae laudantium unde accusantium aliquacilis rem unde deleniti, exercitationem nulla optio iusto repudiandae maxime iure mollitia facere libero explicabo inventore atque, quibusdam quod commodi quaerat corrupti qui minima. Non repudiandae odio sint soluta saepe sed debitis! Unde eos laborum accusamus exercitationem esse, corrupti possimus blanditiis ipsa sed laudantium ad minus numquam labore consequuntur explicabo ex delectus. Velit deserunt itaque sint quod! Natus minus reiciendis vel iusto a saepe. Necessitatibus nihil blanditiis animi reprehenderit doloremque. Quae quo nobis, laborum, perspiciatis cum doloribus natus ipsum asperiores possimus tempore dolorum? Possimus voluptatibus eos tempore veritatis itaque, autem veniam eligendi quo voluptas quam nobis, suscipit distinctio hic, sequi alias assumenda magnam ad similique. Nostrum ratione explicabo maxime, quo excepturi itaque et nulla delectus. Consectetur dolor quaerat odio dolorem ab cum esse quo a dignissimos corrupti omnis eligendi temporibus culpa ea velit officiis quod, fugiat error nisi doloremque!</p>
+        <br>
+        <button id="openModalBtn">Open Modal</button>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal-bg">
+        <div class="modal-content">
+            <span class="close" id="closeModalBtn">&timesd;</span>
+            <h2>Modal Title</h2>
+            <p>This is some modal content. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex laudantium animi ipsa id. Soluta eos dolorem corrupti odio at iure id iste laborum temporibus culpa harum vero, itaque ut vitae?</p>
+            <br>
+            <button id="viewModalBtn">View Modal</button>
+        </div>
+    </div>
+
+
+    <script>
+
+        const btn = document.getElementById('openModalBtn');
+        btn.addEventListener('click', ()=>{
+            document.getElementById('myModal').style.display = 'block';
+        });
+
+        document.getElementById('closeModalBtn').addEventListener('click', ()=>{
+            document.getElementById('myModal').style.display = 'none';
+        })
+
+        window.addEventListener("click", function(event) {
+            if (event.target === document.getElementById("myModal")) {
+                document.getElementById("myModal").style.display = "none";
+            }
+        });
+
+        document.getElementById('viewModalBtn').addEventListener('click', ()=>{
+            document.getElementById('myModal').style.background = 'red'
+        })
+    </script>
+</body>
+</html>
